@@ -1,5 +1,5 @@
 streamlit>=1.38.0
-ultralytics    # try the latest; may still have Python range constraints
+ultralytics==8.3.227
 torch          # leave unpinned so pip picks a compatible wheel
 torchvision
 torchaudio
