@@ -3,6 +3,6 @@ numpy>=1.24.0
 pillow>=10.0.0
 torch>=2.0.0
 torchvision>=0.15.0
-ultralytics>=8.1.0
+ultralytics==8.3.227
 tensorflow>=2.13.0
 matplotlib>=3.7.0

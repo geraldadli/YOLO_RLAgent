@@ -1,113 +1,124 @@
 """
-Debug script to check YOLO loading issues
-Run this to see what's happening with your YOLO model file
+Manual YOLO loading test
+This will help us see the exact error and fix it
 """
 import os
 from pathlib import Path
 
-# Find the _MODELLING directory
+# Setup path
 SCRIPT_DIR = Path(__file__).parent.absolute()
-MODELLING_ROOT = str(SCRIPT_DIR / "_MODELLING")
+MODELLING_ROOT = SCRIPT_DIR / "_MODELLING"
+YOLO_PATH = MODELLING_ROOT / "yolov12x-cls.pt"
 
 print("="*60)
-print("YOLO Loading Debug Information")
+print("Manual YOLO Loading Test")
 print("="*60)
-print(f"\nScript directory: {SCRIPT_DIR}")
-print(f"MODELLING_ROOT: {MODELLING_ROOT}")
-print(f"MODELLING_ROOT exists: {os.path.exists(MODELLING_ROOT)}")
+print(f"Looking for YOLO at: {YOLO_PATH}")
+print(f"File exists: {YOLO_PATH.exists()}")
 
-# List all files in _MODELLING
-print(f"\n{'='*60}")
-print("Files in _MODELLING directory:")
-print("="*60)
-if os.path.exists(MODELLING_ROOT):
-    all_files = list(Path(MODELLING_ROOT).glob('*'))
-    if all_files:
-        for f in sorted(all_files):
-            size_mb = f.stat().st_size / (1024 * 1024) if f.is_file() else 0
-            print(f"  {'[FILE]' if f.is_file() else '[DIR] '} {f.name:40s} {size_mb:>8.2f} MB")
-    else:
-        print("  (empty directory)")
+if YOLO_PATH.exists():
+    size_mb = YOLO_PATH.stat().st_size / (1024 * 1024)
+    print(f"File size: {size_mb:.2f} MB")
 else:
-    print("  Directory does not exist!")
+    print("ERROR: YOLO file not found!")
+    exit(1)
 
-# Check for YOLO files specifically
-print(f"\n{'='*60}")
-print("YOLO-related files:")
+print("\n" + "="*60)
+print("Step 1: Import custom modules")
 print("="*60)
-yolo_candidates = [
-    'yolov12x-cls.pt',
-    'yolov12-cls.pt',
-    'yolo12x-cls.pt',
-    'yolo.pt',
-    'best.pt',
-]
 
-for candidate in yolo_candidates:
-    full_path = os.path.join(MODELLING_ROOT, candidate)
-    exists = os.path.exists(full_path)
-    print(f"  {candidate:30s} {'✅ EXISTS' if exists else '❌ NOT FOUND'}")
-    if exists:
-        size_mb = os.path.getsize(full_path) / (1024 * 1024)
-        print(f"    → Size: {size_mb:.2f} MB")
-        print(f"    → Full path: {full_path}")
+try:
+    import yolo_custom_modules
+    print("✅ Custom modules imported successfully")
+except ImportError as e:
+    print(f"⚠️ Could not import yolo_custom_modules: {e}")
+    print("   Continuing without custom modules...")
 
-# Check for any .pt files
-print(f"\n{'='*60}")
-print("All .pt files in _MODELLING:")
+print("\n" + "="*60)
+print("Step 2: Import ultralytics")
 print("="*60)
-if os.path.exists(MODELLING_ROOT):
-    pt_files = list(Path(MODELLING_ROOT).glob('*.pt'))
-    if pt_files:
-        for pt in sorted(pt_files):
-            size_mb = pt.stat().st_size / (1024 * 1024)
-            print(f"  {pt.name:40s} {size_mb:>8.2f} MB")
-    else:
-        print("  No .pt files found")
 
-# Try to import ultralytics
-print(f"\n{'='*60}")
-print("Checking ultralytics installation:")
-print("="*60)
 try:
     from ultralytics import YOLO
-    print("  ✅ ultralytics is installed")
-    print(f"  Version: {YOLO.__module__}")
-    
-    # Try to load if file exists
-    yolo_path = os.path.join(MODELLING_ROOT, 'yolov12x-cls.pt')
-    if os.path.exists(yolo_path):
-        print(f"\n  Attempting to load: {yolo_path}")
-        try:
-            model = YOLO(yolo_path)
-            print("  ✅ YOLO model loaded successfully!")
-            print(f"  Model type: {type(model)}")
-        except Exception as e:
-            print(f"  ❌ Failed to load YOLO model")
-            print(f"  Error: {e}")
-            import traceback
-            print("\n  Full traceback:")
-            traceback.print_exc()
-    else:
-        print(f"\n  File not found: {yolo_path}")
-        
+    import ultralytics
+    print(f"✅ ultralytics imported successfully")
+    print(f"   Version: {ultralytics.__version__}")
 except ImportError as e:
-    print(f"  ❌ ultralytics not installed: {e}")
-    print("\n  Install with: pip install ultralytics")
+    print(f"❌ Could not import ultralytics: {e}")
+    print("\nInstall with: pip install ultralytics")
+    exit(1)
 
-print(f"\n{'='*60}")
-print("Recommendations:")
+print("\n" + "="*60)
+print("Step 3: Check for A2C2f module")
 print("="*60)
-if not os.path.exists(MODELLING_ROOT):
-    print("  1. Create the _MODELLING directory")
-    print("  2. Place your YOLO model file there")
-elif not list(Path(MODELLING_ROOT).glob('*.pt')):
-    print("  1. No .pt files found in _MODELLING")
-    print("  2. Copy your YOLO weights file to _MODELLING/")
-    print("  3. Rename it to 'yolov12x-cls.pt' or update the code")
-else:
-    print("  1. Verify the YOLO file is not corrupted")
-    print("  2. Check the file size (should be ~50-200 MB)")
-    print("  3. Try loading it manually with: YOLO('path/to/file.pt')")
 
+try:
+    import ultralytics.nn.modules.block as block_module
+    has_a2c2f = hasattr(block_module, 'A2C2f')
+    print(f"A2C2f available: {has_a2c2f}")
+    
+    if has_a2c2f:
+        print(f"A2C2f type: {type(block_module.A2C2f)}")
+    else:
+        print("⚠️ A2C2f not found in ultralytics.nn.modules.block")
+        print("   Available modules:")
+        for name in dir(block_module):
+            if not name.startswith('_') and name[0].isupper():
+                print(f"     - {name}")
+except Exception as e:
+    print(f"Error checking modules: {e}")
+
+print("\n" + "="*60)
+print("Step 4: Load YOLO model")
 print("="*60)
+
+try:
+    print(f"Loading: {YOLO_PATH}")
+    model = YOLO(str(YOLO_PATH))
+    print("✅ YOLO model loaded successfully!")
+    print(f"   Model type: {type(model)}")
+    print(f"   Model names: {model.names if hasattr(model, 'names') else 'N/A'}")
+    
+    # Try a dummy prediction
+    print("\nStep 5: Test prediction on dummy image")
+    import numpy as np
+    from PIL import Image
+    
+    dummy_img = Image.fromarray(np.random.randint(0, 255, (640, 640, 3), dtype=np.uint8))
+    print("Created dummy 640x640 image")
+    
+    results = model.predict(dummy_img, verbose=False)
+    print(f"✅ Prediction successful!")
+    print(f"   Results type: {type(results)}")
+    print(f"   Number of results: {len(results)}")
+    
+except Exception as e:
+    print(f"❌ Failed to load YOLO model")
+    print(f"\nError type: {type(e).__name__}")
+    print(f"Error message: {e}")
+    
+    print("\n" + "="*60)
+    print("Full Traceback:")
+    print("="*60)
+    import traceback
+    traceback.print_exc()
+    
+    print("\n" + "="*60)
+    print("Suggested fixes:")
+    print("="*60)
+    
+    if "A2C2f" in str(e):
+        print("1. Make sure yolo_custom_modules.py is in the same directory")
+        print("2. Run: pip install --upgrade ultralytics>=8.1.0")
+        print("3. Try downloading a standard YOLOv8 model instead:")
+        print("   from ultralytics import YOLO")
+        print("   model = YOLO('yolov8n-cls.pt')  # Auto-downloads")
+    elif "module" in str(e).lower():
+        print("1. Install missing dependencies:")
+        print("   pip install torch torchvision ultralytics")
+    else:
+        print("1. Verify the .pt file is not corrupted")
+        print("2. Try re-downloading the model")
+        print("3. Check if the model is compatible with your ultralytics version")
+
+print("\n" + "="*60)

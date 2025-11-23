@@ -648,7 +648,7 @@ def get_initial_bbox_by_yolo(img_path_or_obj, models):
                 return None
         return None
 
-def refine_with_dqn(image_path: str, init_bbox: Tuple[int,int,int,int], models, max_steps=12):
+def refine_with_dqn(image_path: str, init_bbox: Tuple[int,int,int,int], models, max_steps=4):
     if models.get('dqn') is None or models.get('fe') is None:
         return init_bbox, None
     env = ActiveCropEnvTorch(image_path, init_bbox, models['fe'], img_size=(128,128), max_steps=max_steps)
