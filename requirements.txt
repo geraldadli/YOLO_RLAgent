@@ -1,0 +1,26 @@
+streamlit>=1.38.0
+ultralytics>=8.2.0
+
+# Torch CPU (auto-resolves OS wheel)
+torch
+torchvision
+torchaudio
+
+tensorflow==2.15.0
+numpy
+pillow
+tqdm
+scikit-learn
+matplotlib
+pandas
+
+# huggingface components (CLIP, SigLIP etc)
+transformers
+sentencepiece
+accelerate
+
+# YOLOv12 / bbox utils
+opencv-python-headless
+
+# path + utilities
+python-dotenv
