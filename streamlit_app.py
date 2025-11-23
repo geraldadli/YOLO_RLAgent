@@ -388,13 +388,13 @@ def load_models(mod_root: str):
         except Exception as e:
             st.warning(f"Failed loading TF classifier: {e}")
 
-    # YOLO candidate: prefer any .pt in mod_root, then fallback to hardcoded dataset path if present
+    # YOLO candidate: prefer any .pt in mod_root
     yolo_candidates = list(mod_root.glob('*.pt'))
-    # include a popular kaggle-derived path as fallback (kept for compatibility)
-    kaggle_fallback = Path('_MODELLING/yolov12x-cls.pt')
     
-    if kaggle_fallback.exists():
-        yolo_candidates.append(kaggle_fallback)
+    # Also check for the specific yolov12x-cls.pt file in mod_root
+    specific_yolo = mod_root / 'yolov12x-cls.pt'
+    if specific_yolo.exists() and specific_yolo not in yolo_candidates:
+        yolo_candidates.append(specific_yolo)
     if YOLO is not None and yolo_candidates:
         try:
             yolo_path = str(yolo_candidates[-1])
