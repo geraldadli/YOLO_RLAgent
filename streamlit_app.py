@@ -593,7 +593,7 @@ with col1:
 
 with col2:
     st.markdown("**Actions**")
-    refine_steps = st.slider("Max refine steps (DQN)", min_value=1, max_value=12, value=3)
+    refine_steps = st.slider("Max refine steps (DQN)", min_value=1, max_value=4, value=3)
     run_refine = st.button("Refine & Classify")
 
 image_path = None
