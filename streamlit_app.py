@@ -29,8 +29,16 @@ except Exception:
     nn = None
 
 try:
+    # Import custom YOLO modules first (for YOLOv12 support)
+    try:
+        import yolo_custom_modules
+        print("✅ Loaded custom YOLO modules (A2C2f support)")
+    except ImportError:
+        print("⚠️ yolo_custom_modules.py not found - may have issues with YOLOv12")
+    
     from ultralytics import YOLO
-except Exception:
+except Exception as e:
+    print(f"⚠️ Could not import YOLO: {e}")
     YOLO = None
 
 try:

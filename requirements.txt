@@ -1,17 +1,8 @@
-streamlit>=1.38.0
-ultralytics==8.3.227
-torch          # leave unpinned so pip picks a compatible wheel
-torchvision
-torchaudio
-tensorflow==2.20.0
-numpy
-pillow
-tqdm
-scikit-learn
-matplotlib
-pandas
-transformers
-sentencepiece
-accelerate
-opencv-python-headless
-python-dotenv
+streamlit>=1.28.0
+numpy>=1.24.0
+pillow>=10.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.1.0
+tensorflow>=2.13.0
+matplotlib>=3.7.0
