@@ -19,6 +19,8 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 
+!pip install ultralytics
+
 # try imports
 try:
     import torch
@@ -392,7 +394,7 @@ def load_models(mod_root: str):
     yolo_candidates = list(mod_root.glob('*.pt'))
     # include a popular kaggle-derived path as fallback (kept for compatibility)
     kaggle_fallback = Path('_MODELLING/yolov12x-cls.pt')
-    
+
     if kaggle_fallback.exists():
         yolo_candidates.append(kaggle_fallback)
     if YOLO is not None and yolo_candidates:
