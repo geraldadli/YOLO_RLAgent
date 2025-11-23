@@ -391,7 +391,7 @@ def load_models(mod_root: str):
     # YOLO candidate: prefer any .pt in mod_root, then fallback to hardcoded dataset path if present
     yolo_candidates = list(mod_root.glob('*.pt'))
     # include a popular kaggle-derived path as fallback (kept for compatibility)
-    kaggle_fallback = Path('_MODELLING\yolov12x-cls.ptt')
+    kaggle_fallback = Path('_MODELLING\yolov12x-cls.pt')
     if kaggle_fallback.exists():
         yolo_candidates.append(kaggle_fallback)
     if YOLO is not None and yolo_candidates:
