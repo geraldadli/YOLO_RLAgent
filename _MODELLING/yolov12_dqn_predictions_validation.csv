@@ -1,0 +1,99 @@
+image_path,true_class,pred_class,correct
+/kaggle/working/_MODELLING/validation/Cherry/image22.jpeg,Cherry,Cherry,True
+/kaggle/working/_MODELLING/validation/Cherry/images19.jpg,Cherry,Cherry,True
+/kaggle/working/_MODELLING/validation/Cherry/image28.jpeg,Cherry,Cherry,True
+/kaggle/working/_MODELLING/validation/Cherry/images8.jpg,Cherry,tomato,False
+/kaggle/working/_MODELLING/validation/Coffee-plant/images10.jpg,Coffee-plant,Tobacco-plant,False
+/kaggle/working/_MODELLING/validation/Coffee-plant/images55.jpg,Coffee-plant,Cherry,False
+/kaggle/working/_MODELLING/validation/Coffee-plant/images64.jpg,Coffee-plant,Coffee-plant,True
+/kaggle/working/_MODELLING/validation/Cucumber/image (13).jpg,Cucumber,Cucumber,True
+/kaggle/working/_MODELLING/validation/Cucumber/image (27).jpg,Cucumber,Cucumber,True
+/kaggle/working/_MODELLING/validation/Cucumber/image (16).jpg,Cucumber,Tobacco-plant,False
+/kaggle/working/_MODELLING/validation/Cucumber/image (12).jpg,Cucumber,Cucumber,True
+/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/image11.jpeg,Fox_nut(Makhana),Fox_nut(Makhana),True
+/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images20.jpg,Fox_nut(Makhana),Fox_nut(Makhana),True
+/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images31.jpg,Fox_nut(Makhana),Fox_nut(Makhana),True
+/kaggle/working/_MODELLING/validation/Lemon/image29.jpeg,Lemon,Lemon,True
+/kaggle/working/_MODELLING/validation/Lemon/images10.jpg,Lemon,Lemon,True
+/kaggle/working/_MODELLING/validation/Lemon/image31.jpeg,Lemon,Lemon,True
+/kaggle/working/_MODELLING/validation/Olive-tree/image (5).jpeg,Olive-tree,Lemon,False
+/kaggle/working/_MODELLING/validation/Olive-tree/image (12).jpg,Olive-tree,Olive-tree,True
+/kaggle/working/_MODELLING/validation/Olive-tree/image (7).jpeg,Olive-tree,papaya,False
+/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (1).png,Pearl_millet(bajra),Pearl_millet(bajra),True
+/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (23).jpg,Pearl_millet(bajra),Pearl_millet(bajra),True
+/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (84).jpg,Pearl_millet(bajra),Pearl_millet(bajra),True
+/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (76).jpg,Pearl_millet(bajra),Pearl_millet(bajra),True
+/kaggle/working/_MODELLING/validation/Tobacco-plant/images41.jpg,Tobacco-plant,Tobacco-plant,True
+/kaggle/working/_MODELLING/validation/Tobacco-plant/images34.jpg,Tobacco-plant,Tobacco-plant,True
+/kaggle/working/_MODELLING/validation/Tobacco-plant/images24.jpg,Tobacco-plant,Tobacco-plant,True
+/kaggle/working/_MODELLING/validation/Tobacco-plant/images36.jpg,Tobacco-plant,clove,False
+/kaggle/working/_MODELLING/validation/almond/image (3).jpg,almond,Coffee-plant,False
+/kaggle/working/_MODELLING/validation/almond/image (14).jpg,almond,cotton,False
+/kaggle/working/_MODELLING/validation/almond/image (3).png,almond,soyabean,False
+/kaggle/working/_MODELLING/validation/banana/image (2).jpg,banana,banana,True
+/kaggle/working/_MODELLING/validation/banana/image (15).jpg,banana,banana,True
+/kaggle/working/_MODELLING/validation/banana/image (8).jpg,banana,banana,True
+/kaggle/working/_MODELLING/validation/banana/image (17).jpg,banana,banana,True
+/kaggle/working/_MODELLING/validation/cardamom/image (12).jpeg,cardamom,Olive-tree,False
+/kaggle/working/_MODELLING/validation/cardamom/image (1).jpeg,cardamom,cardamom,True
+/kaggle/working/_MODELLING/validation/cardamom/image (11).jpeg,cardamom,cardamom,True
+/kaggle/working/_MODELLING/validation/chilli/image11.jpeg,chilli,chilli,True
+/kaggle/working/_MODELLING/validation/chilli/image15.jpeg,chilli,chilli,True
+/kaggle/working/_MODELLING/validation/chilli/image18.jpeg,chilli,sugarcane,False
+/kaggle/working/_MODELLING/validation/clove/images6.jpg,clove,clove,True
+/kaggle/working/_MODELLING/validation/clove/images13.jpg,clove,chilli,False
+/kaggle/working/_MODELLING/validation/clove/images37.jpg,clove,clove,True
+/kaggle/working/_MODELLING/validation/coconut/image (21).jpg,coconut,coconut,True
+/kaggle/working/_MODELLING/validation/coconut/image (32).jpg,coconut,coconut,True
+/kaggle/working/_MODELLING/validation/coconut/image (27).jpg,coconut,coconut,True
+/kaggle/working/_MODELLING/validation/cotton/image (35).jpg,cotton,almond,False
+/kaggle/working/_MODELLING/validation/cotton/image (9).jpg,cotton,cotton,True
+/kaggle/working/_MODELLING/validation/cotton/image (31).jpg,cotton,cotton,True
+/kaggle/working/_MODELLING/validation/cotton/image (16).jpg,cotton,cotton,True
+/kaggle/working/_MODELLING/validation/gram/image (2).png,gram,gram,True
+/kaggle/working/_MODELLING/validation/gram/image (13).jpg,gram,gram,True
+/kaggle/working/_MODELLING/validation/gram/image (17).jpg,gram,tomato,False
+/kaggle/working/_MODELLING/validation/jowar/image (21).jpg,jowar,jowar,True
+/kaggle/working/_MODELLING/validation/jowar/image (12).jpg,jowar,jowar,True
+/kaggle/working/_MODELLING/validation/jowar/image (7).jpeg,jowar,jowar,True
+/kaggle/working/_MODELLING/validation/jute/image (18).jpg,jute,jute,True
+/kaggle/working/_MODELLING/validation/jute/image (7).jpg,jute,tea,False
+/kaggle/working/_MODELLING/validation/jute/image (8).jpg,jute,jute,True
+/kaggle/working/_MODELLING/validation/maize/image (6).jpeg,maize,maize,True
+/kaggle/working/_MODELLING/validation/maize/image (13).jpg,maize,banana,False
+/kaggle/working/_MODELLING/validation/maize/image (14).jpg,maize,maize,True
+/kaggle/working/_MODELLING/validation/maize/image (20).jpg,maize,coconut,False
+/kaggle/working/_MODELLING/validation/mustard-oil/image (2).png,mustard-oil,wheat,False
+/kaggle/working/_MODELLING/validation/mustard-oil/image (14).jpg,mustard-oil,mustard-oil,True
+/kaggle/working/_MODELLING/validation/mustard-oil/image (5).jpeg,mustard-oil,mustard-oil,True
+/kaggle/working/_MODELLING/validation/papaya/image (18).jpg,papaya,sunflower,False
+/kaggle/working/_MODELLING/validation/papaya/image (7).jpg,papaya,papaya,True
+/kaggle/working/_MODELLING/validation/papaya/image (22).jpg,papaya,papaya,True
+/kaggle/working/_MODELLING/validation/pineapple/image (21).jpg,pineapple,pineapple,True
+/kaggle/working/_MODELLING/validation/pineapple/image (8).jpg,pineapple,pineapple,True
+/kaggle/working/_MODELLING/validation/pineapple/image (12).jpg,pineapple,pineapple,True
+/kaggle/working/_MODELLING/validation/rice/image (4).jpg,rice,jute,False
+/kaggle/working/_MODELLING/validation/rice/image (8).jpg,rice,rice,True
+/kaggle/working/_MODELLING/validation/rice/image (9).jpeg,rice,rice,True
+/kaggle/working/_MODELLING/validation/soyabean/imaage (31).jpg,soyabean,soyabean,True
+/kaggle/working/_MODELLING/validation/soyabean/imaage (30).jpg,soyabean,soyabean,True
+/kaggle/working/_MODELLING/validation/soyabean/imaage (10).jpg,soyabean,soyabean,True
+/kaggle/working/_MODELLING/validation/sugarcane/image (13).jpg,sugarcane,rice,False
+/kaggle/working/_MODELLING/validation/sugarcane/image (4).jpg,sugarcane,Fox_nut(Makhana),False
+/kaggle/working/_MODELLING/validation/sugarcane/image (15).jpg,sugarcane,sugarcane,True
+/kaggle/working/_MODELLING/validation/sunflower/image (7).jpg,sunflower,sunflower,True
+/kaggle/working/_MODELLING/validation/sunflower/image (30).jpg,sunflower,sunflower,True
+/kaggle/working/_MODELLING/validation/sunflower/image (28).jpg,sunflower,sunflower,True
+/kaggle/working/_MODELLING/validation/tea/image20.jpeg,tea,tea,True
+/kaggle/working/_MODELLING/validation/tea/image14.jpeg,tea,tea,True
+/kaggle/working/_MODELLING/validation/tea/images7.jpg,tea,cardamom,False
+/kaggle/working/_MODELLING/validation/tomato/image (13).jpeg,tomato,Coffee-plant,False
+/kaggle/working/_MODELLING/validation/tomato/image (5).jpeg,tomato,Coffee-plant,False
+/kaggle/working/_MODELLING/validation/tomato/image (7).jpeg,tomato,tomato,True
+/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (4).jpg,vigna-radiati(Mung),sunflower,False
+/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (27).jpg,vigna-radiati(Mung),clove,False
+/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (2).jpg,vigna-radiati(Mung),papaya,False
+/kaggle/working/_MODELLING/validation/wheat/image (43).jpg,wheat,wheat,True
+/kaggle/working/_MODELLING/validation/wheat/image (35).jpg,wheat,wheat,True
+/kaggle/working/_MODELLING/validation/wheat/image (48).jpg,wheat,wheat,True
+/kaggle/working/_MODELLING/validation/wheat/image (41).jpg,wheat,wheat,True

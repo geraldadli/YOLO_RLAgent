@@ -1,0 +1,36 @@
+                     precision    recall  f1-score   support
+
+             Cherry      0.750     0.750     0.750         4
+       Coffee-plant      0.250     0.333     0.286         3
+           Cucumber      1.000     0.750     0.857         4
+   Fox_nut(Makhana)      0.750     1.000     0.857         3
+              Lemon      0.750     1.000     0.857         3
+         Olive-tree      0.500     0.333     0.400         3
+Pearl_millet(bajra)      1.000     1.000     1.000         4
+      Tobacco-plant      0.600     0.750     0.667         4
+             almond      0.000     0.000     0.000         3
+             banana      0.800     1.000     0.889         4
+           cardamom      0.667     0.667     0.667         3
+             chilli      0.667     0.667     0.667         3
+              clove      0.500     0.667     0.571         3
+            coconut      0.750     1.000     0.857         3
+             cotton      0.750     0.750     0.750         4
+               gram      1.000     0.667     0.800         3
+              jowar      1.000     1.000     1.000         3
+               jute      0.667     0.667     0.667         3
+              maize      1.000     0.500     0.667         4
+        mustard-oil      1.000     0.667     0.800         3
+             papaya      0.500     0.667     0.571         3
+          pineapple      1.000     1.000     1.000         3
+               rice      0.667     0.667     0.667         3
+           soyabean      0.750     1.000     0.857         3
+          sugarcane      0.500     0.333     0.400         3
+          sunflower      0.600     1.000     0.750         3
+                tea      0.667     0.667     0.667         3
+             tomato      0.333     0.333     0.333         3
+vigna-radiati(Mung)      0.000     0.000     0.000         3
+              wheat      0.800     1.000     0.889         4
+
+           accuracy                          0.704        98
+          macro avg      0.674     0.694     0.671        98
+       weighted avg      0.687     0.704     0.683        98

@@ -1,0 +1,2368 @@
+{
+  "/kaggle/working/_MODELLING/validation/sugarcane/image (13).jpg": {
+    "class": "maize",
+    "class_idx": 18,
+    "bbox": [
+      136,
+      73,
+      406,
+      217
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2885392904281616,
+    "true_class": "sugarcane"
+  },
+  "/kaggle/working/_MODELLING/validation/sugarcane/image (4).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.13485142588615417,
+    "true_class": "sugarcane"
+  },
+  "/kaggle/working/_MODELLING/validation/sugarcane/image (26).jpg": {
+    "class": "sugarcane",
+    "class_idx": 24,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5907548069953918,
+    "true_class": "sugarcane"
+  },
+  "/kaggle/working/_MODELLING/validation/sugarcane/image (15).jpg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      134,
+      100,
+      400,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.30355533957481384,
+    "true_class": "sugarcane"
+  },
+  "/kaggle/working/_MODELLING/validation/sugarcane/image (22).jpg": {
+    "class": "sugarcane",
+    "class_idx": 24,
+    "bbox": [
+      157,
+      105,
+      469,
+      313
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.20124955475330353,
+    "true_class": "sugarcane"
+  },
+  "/kaggle/working/_MODELLING/validation/coconut/image (21).jpg": {
+    "class": "coconut",
+    "class_idx": 13,
+    "bbox": [
+      150,
+      188,
+      450,
+      562
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3909614384174347,
+    "true_class": "coconut"
+  },
+  "/kaggle/working/_MODELLING/validation/coconut/image (1).jpeg": {
+    "class": "chilli",
+    "class_idx": 11,
+    "bbox": [
+      256,
+      192,
+      768,
+      576
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.20362789928913116,
+    "true_class": "coconut"
+  },
+  "/kaggle/working/_MODELLING/validation/coconut/image (32).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      125,
+      122,
+      375,
+      366
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.37398168444633484,
+    "true_class": "coconut"
+  },
+  "/kaggle/working/_MODELLING/validation/coconut/image (27).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      501,
+      501,
+      1501,
+      1501
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2719089090824127,
+    "true_class": "coconut"
+  },
+  "/kaggle/working/_MODELLING/validation/coconut/image (10).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      320,
+      213,
+      960,
+      637
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3617897629737854,
+    "true_class": "coconut"
+  },
+  "/kaggle/working/_MODELLING/validation/gram/image (2).png": {
+    "class": "gram",
+    "class_idx": 15,
+    "bbox": [
+      125,
+      125,
+      375,
+      375
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.28774431347846985,
+    "true_class": "gram"
+  },
+  "/kaggle/working/_MODELLING/validation/gram/image (13).jpg": {
+    "class": "Cucumber",
+    "class_idx": 2,
+    "bbox": [
+      150,
+      130,
+      450,
+      390
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2663922607898712,
+    "true_class": "gram"
+  },
+  "/kaggle/working/_MODELLING/validation/gram/image (2).jpg": {
+    "class": "gram",
+    "class_idx": 15,
+    "bbox": [
+      88,
+      49,
+      264,
+      147
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.20112775266170502,
+    "true_class": "gram"
+  },
+  "/kaggle/working/_MODELLING/validation/gram/image (12).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      169,
+      300,
+      505,
+      900
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.23950494825839996,
+    "true_class": "gram"
+  },
+  "/kaggle/working/_MODELLING/validation/gram/image (17).jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      200,
+      133,
+      600,
+      399
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.14934717118740082,
+    "true_class": "gram"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (24).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      109,
+      145,
+      325,
+      435
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4459259510040283,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (6).jpeg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      150,
+      113,
+      450,
+      337
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.25552067160606384,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (13).jpg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      358,
+      100,
+      1072,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.38218867778778076,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (2).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1665419340133667,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (14).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      125,
+      100,
+      375,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.35556864738464355,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (20).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      256,
+      192,
+      768,
+      576
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.17980049550533295,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (8).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      135,
+      101,
+      405,
+      303
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1749245524406433,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/maize/image (7).jpeg": {
+    "class": "maize",
+    "class_idx": 18,
+    "bbox": [
+      100,
+      75,
+      300,
+      225
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.24259720742702484,
+    "true_class": "maize"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (1).png": {
+    "class": "Pearl_millet(bajra)",
+    "class_idx": 6,
+    "bbox": [
+      125,
+      100,
+      375,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1756422519683838,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (23).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3778092563152313,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (1).jpeg": {
+    "class": "Pearl_millet(bajra)",
+    "class_idx": 6,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.40731489658355713,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (84).jpg": {
+    "class": "jowar",
+    "class_idx": 16,
+    "bbox": [
+      66,
+      48,
+      196,
+      144
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.31011199951171875,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (14).jpg": {
+    "class": "Pearl_millet(bajra)",
+    "class_idx": 6,
+    "bbox": [
+      80,
+      40,
+      238,
+      118
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3191370964050293,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (76).jpg": {
+    "class": "Pearl_millet(bajra)",
+    "class_idx": 6,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3255860507488251,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/Pearl_millet(bajra)/image (59).jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.22572876513004303,
+    "true_class": "Pearl_millet(bajra)"
+  },
+  "/kaggle/working/_MODELLING/validation/rice/image (4).jpg": {
+    "class": "sugarcane",
+    "class_idx": 24,
+    "bbox": [
+      190,
+      188,
+      568,
+      564
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.14303477108478546,
+    "true_class": "rice"
+  },
+  "/kaggle/working/_MODELLING/validation/rice/image (18).jpg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      480,
+      240,
+      1440,
+      720
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2324233055114746,
+    "true_class": "rice"
+  },
+  "/kaggle/working/_MODELLING/validation/rice/image (10).jpg": {
+    "class": "sugarcane",
+    "class_idx": 24,
+    "bbox": [
+      256,
+      81,
+      768,
+      241
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2397552877664566,
+    "true_class": "rice"
+  },
+  "/kaggle/working/_MODELLING/validation/rice/image (8).jpg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      70,
+      45,
+      208,
+      135
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.25273796916007996,
+    "true_class": "rice"
+  },
+  "/kaggle/working/_MODELLING/validation/rice/image (9).jpeg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      73,
+      44,
+      217,
+      130
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6873754262924194,
+    "true_class": "rice"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/images24.jpg": {
+    "class": "Lemon",
+    "class_idx": 4,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.259810209274292,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/image29.jpeg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.21738572418689728,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/images10.jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3715689778327942,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/images23.jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      47,
+      67,
+      141,
+      201
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.17648687958717346,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/image31.jpeg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6469128131866455,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/Lemon/images28.jpg": {
+    "class": "Cucumber",
+    "class_idx": 2,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.15517839789390564,
+    "true_class": "Lemon"
+  },
+  "/kaggle/working/_MODELLING/validation/tea/image12.jpeg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6743956208229065,
+    "true_class": "tea"
+  },
+  "/kaggle/working/_MODELLING/validation/tea/image20.jpeg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      79,
+      40,
+      235,
+      120
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.47672584652900696,
+    "true_class": "tea"
+  },
+  "/kaggle/working/_MODELLING/validation/tea/image14.jpeg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      77,
+      41,
+      231,
+      123
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4274078905582428,
+    "true_class": "tea"
+  },
+  "/kaggle/working/_MODELLING/validation/tea/images7.jpg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5479656457901001,
+    "true_class": "tea"
+  },
+  "/kaggle/working/_MODELLING/validation/tea/image17.jpeg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      94,
+      34,
+      280,
+      100
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.45216891169548035,
+    "true_class": "tea"
+  },
+  "/kaggle/working/_MODELLING/validation/jowar/image (21).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      325,
+      217,
+      975,
+      649
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.15947078168392181,
+    "true_class": "jowar"
+  },
+  "/kaggle/working/_MODELLING/validation/jowar/image (15).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      439,
+      310,
+      1315,
+      930
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.19545544683933258,
+    "true_class": "jowar"
+  },
+  "/kaggle/working/_MODELLING/validation/jowar/image (12).jpg": {
+    "class": "jowar",
+    "class_idx": 16,
+    "bbox": [
+      200,
+      150,
+      600,
+      450
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.45258110761642456,
+    "true_class": "jowar"
+  },
+  "/kaggle/working/_MODELLING/validation/jowar/image (7).jpeg": {
+    "class": "Coffee-plant",
+    "class_idx": 1,
+    "bbox": [
+      49,
+      65,
+      145,
+      193
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2363825887441635,
+    "true_class": "jowar"
+  },
+  "/kaggle/working/_MODELLING/validation/jowar/image (6).jpg": {
+    "class": "jowar",
+    "class_idx": 16,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3651091456413269,
+    "true_class": "jowar"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (27).jpg": {
+    "class": "sunflower",
+    "class_idx": 25,
+    "bbox": [
+      256,
+      170,
+      768,
+      510
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.9329594373703003,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (3).jpeg": {
+    "class": "sunflower",
+    "class_idx": 25,
+    "bbox": [
+      104,
+      104,
+      312,
+      312
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.8997640013694763,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (2).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      225,
+      128,
+      675,
+      382
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.28514933586120605,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (7).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      219,
+      128,
+      655,
+      382
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.35817551612854004,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (30).jpg": {
+    "class": "sunflower",
+    "class_idx": 25,
+    "bbox": [
+      320,
+      213,
+      960,
+      639
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.633459210395813,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/sunflower/image (28).jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      504,
+      378,
+      1512,
+      1134
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2747071385383606,
+    "true_class": "sunflower"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (25).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      300,
+      200,
+      900,
+      600
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1464357078075409,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (23).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      184,
+      88,
+      552,
+      264
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.36304348707199097,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (4).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      188,
+      125,
+      562,
+      375
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5400072336196899,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (2).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      247,
+      150,
+      739,
+      450
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.707126796245575,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (7).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      159,
+      119,
+      475,
+      357
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.260857492685318,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (15).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      396,
+      199,
+      1186,
+      597
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4674761891365051,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (8).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      151,
+      141,
+      451,
+      421
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4735552966594696,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/banana/image (17).jpg": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      563,
+      188,
+      1687,
+      562
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.36428338289260864,
+    "true_class": "banana"
+  },
+  "/kaggle/working/_MODELLING/validation/Coffee-plant/images10.jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      45,
+      70,
+      135,
+      210
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2415611445903778,
+    "true_class": "Coffee-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Coffee-plant/images55.jpg": {
+    "class": "clove",
+    "class_idx": 12,
+    "bbox": [
+      78,
+      41,
+      232,
+      121
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.31799960136413574,
+    "true_class": "Coffee-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Coffee-plant/images64.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      78,
+      41,
+      232,
+      121
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4434167742729187,
+    "true_class": "Coffee-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Coffee-plant/images48.jpg": {
+    "class": "Coffee-plant",
+    "class_idx": 1,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.46502891182899475,
+    "true_class": "Coffee-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Coffee-plant/images50.jpg": {
+    "class": "tomato",
+    "class_idx": 27,
+    "bbox": [
+      68,
+      47,
+      202,
+      139
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4532417953014374,
+    "true_class": "Coffee-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (21).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      77,
+      355,
+      231
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.9198553562164307,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (1).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      89,
+      355,
+      265
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5665779709815979,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (3).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      158,
+      355,
+      472
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7571900486946106,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (20).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      79,
+      355,
+      237
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6941153407096863,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (8).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      81,
+      355,
+      241
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7272778749465942,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/pineapple/image (12).jpg": {
+    "class": "pineapple",
+    "class_idx": 21,
+    "bbox": [
+      119,
+      79,
+      355,
+      237
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.40587902069091797,
+    "true_class": "pineapple"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (2).png": {
+    "class": "almond",
+    "class_idx": 8,
+    "bbox": [
+      200,
+      133,
+      600,
+      399
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3058575987815857,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (3).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      50,
+      63,
+      148,
+      189
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.41967514157295227,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (14).jpg": {
+    "class": "almond",
+    "class_idx": 8,
+    "bbox": [
+      209,
+      157,
+      627,
+      469
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5632321834564209,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (3).png": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      221,
+      125,
+      663,
+      375
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.15762634575366974,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (10).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      416,
+      311,
+      1248,
+      933
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3536166846752167,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/almond/image (8).jpg": {
+    "class": "gram",
+    "class_idx": 15,
+    "bbox": [
+      55,
+      73,
+      165,
+      219
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3258610963821411,
+    "true_class": "almond"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (4).jpg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      200,
+      99,
+      600,
+      297
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.18235541880130768,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (27).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2872399687767029,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (2).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      125,
+      100,
+      375,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.20807966589927673,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (2).jpeg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      67,
+      47,
+      199,
+      141
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3095070719718933,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (22).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6220093369483948,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/vigna-radiati(Mung)/image (6).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      150,
+      80,
+      450,
+      240
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6942652463912964,
+    "true_class": "vigna-radiati(Mung)"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (18).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      98,
+      70,
+      292,
+      210
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4234415292739868,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (2).jpg": {
+    "class": "sugarcane",
+    "class_idx": 24,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.17078812420368195,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (7).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      111,
+      93,
+      333,
+      277
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6766777038574219,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (11).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      120,
+      90,
+      360,
+      270
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.28795379400253296,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (15).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      200,
+      143,
+      600,
+      427
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5604430437088013,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/jute/image (8).jpg": {
+    "class": "jute",
+    "class_idx": 17,
+    "bbox": [
+      202,
+      152,
+      606,
+      454
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.8389551043510437,
+    "true_class": "jute"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (8).jpeg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      46,
+      69,
+      136,
+      205
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.9538702964782715,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (31).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      90,
+      90,
+      270,
+      270
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7963141798973083,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (7).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5319551825523376,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (30).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      300,
+      158,
+      900,
+      472
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.789018452167511,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (10).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      62,
+      51,
+      186,
+      151
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7212320566177368,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/soyabean/imaage (9).jpg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5466049313545227,
+    "true_class": "soyabean"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (43).jpg": {
+    "class": "rice",
+    "class_idx": 22,
+    "bbox": [
+      480,
+      300,
+      1440,
+      900
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2207900583744049,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (35).jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      138,
+      92,
+      412,
+      274
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4167092740535736,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (19).jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      81,
+      39,
+      241,
+      117
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.24158763885498047,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (48).jpg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      300,
+      169,
+      900,
+      505
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1814662665128708,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (41).jpg": {
+    "class": "jowar",
+    "class_idx": 16,
+    "bbox": [
+      600,
+      338,
+      1800,
+      1012
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3474089801311493,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (8).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.27790382504463196,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (53).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      300,
+      225,
+      900,
+      675
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4758540391921997,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/wheat/image (39).jpg": {
+    "class": "wheat",
+    "class_idx": 29,
+    "bbox": [
+      134,
+      100,
+      400,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5954405665397644,
+    "true_class": "wheat"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (35).jpg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      152,
+      86,
+      456,
+      256
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.31459665298461914,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (9).jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      211,
+      86,
+      633,
+      256
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.707261323928833,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (1).jpeg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      200,
+      112,
+      600,
+      336
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6258385181427002,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (31).jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      400,
+      225,
+      1200,
+      675
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3956712484359741,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (16).jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      150,
+      92,
+      450,
+      276
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7025080919265747,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (8).jpg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      300,
+      178,
+      900,
+      534
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.21063165366649628,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/cotton/image (5).jpg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      150,
+      100,
+      450,
+      300
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.24515554308891296,
+    "true_class": "cotton"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (12).jpeg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      62,
+      51,
+      184,
+      153
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7207628488540649,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (13).jpeg": {
+    "class": "sunflower",
+    "class_idx": 25,
+    "bbox": [
+      104,
+      98,
+      312,
+      294
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.21442706882953644,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (16).jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      225,
+      150,
+      675,
+      450
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5044344067573547,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (2).jpeg": {
+    "class": "tomato",
+    "class_idx": 27,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5217853784561157,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (5).jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4219793379306793,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/tomato/image (7).jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      64,
+      49,
+      192,
+      147
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3599875569343567,
+    "true_class": "tomato"
+  },
+  "/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/image11.jpeg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.21561673283576965,
+    "true_class": "Fox_nut(Makhana)"
+  },
+  "/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images20.jpg": {
+    "class": "Olive-tree",
+    "class_idx": 5,
+    "bbox": [
+      75,
+      42,
+      223,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3403671979904175,
+    "true_class": "Fox_nut(Makhana)"
+  },
+  "/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images11.jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.18185529112815857,
+    "true_class": "Fox_nut(Makhana)"
+  },
+  "/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images31.jpg": {
+    "class": "Fox_nut(Makhana)",
+    "class_idx": 3,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.41572198271751404,
+    "true_class": "Fox_nut(Makhana)"
+  },
+  "/kaggle/working/_MODELLING/validation/Fox_nut(Makhana)/images9.jpg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      70,
+      45,
+      208,
+      135
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.18388642370700836,
+    "true_class": "Fox_nut(Makhana)"
+  },
+  "/kaggle/working/_MODELLING/validation/papaya/image (13).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      67,
+      90,
+      201,
+      270
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.9177996516227722,
+    "true_class": "papaya"
+  },
+  "/kaggle/working/_MODELLING/validation/papaya/image (18).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      300,
+      424,
+      900,
+      1272
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.8038159012794495,
+    "true_class": "papaya"
+  },
+  "/kaggle/working/_MODELLING/validation/papaya/image (7).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      233,
+      155,
+      697,
+      465
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5958508253097534,
+    "true_class": "papaya"
+  },
+  "/kaggle/working/_MODELLING/validation/papaya/image (20).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      278,
+      186,
+      834,
+      556
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4938412010669708,
+    "true_class": "papaya"
+  },
+  "/kaggle/working/_MODELLING/validation/papaya/image (22).jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      266,
+      400,
+      798,
+      1200
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3120618760585785,
+    "true_class": "papaya"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/images41.jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      65,
+      49,
+      195,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3386532962322235,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/images34.jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.29980987310409546,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/images.jpg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      53,
+      59,
+      159,
+      177
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.11032534390687943,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/images24.jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      69,
+      46,
+      205,
+      136
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2484746277332306,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/image10.jpeg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5526593327522278,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/image13.jpeg": {
+    "class": "tea",
+    "class_idx": 26,
+    "bbox": [
+      43,
+      68,
+      127,
+      204
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3426457345485687,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/image16.jpeg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.21587513387203217,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Tobacco-plant/images36.jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      49,
+      65,
+      145,
+      195
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5023364424705505,
+    "true_class": "Tobacco-plant"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (13).jpg": {
+    "class": "tomato",
+    "class_idx": 27,
+    "bbox": [
+      100,
+      75,
+      300,
+      225
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.39210131764411926,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (27).jpg": {
+    "class": "Cucumber",
+    "class_idx": 2,
+    "bbox": [
+      256,
+      192,
+      768,
+      576
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5918998122215271,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (2).jpeg": {
+    "class": "Cucumber",
+    "class_idx": 2,
+    "bbox": [
+      103,
+      104,
+      309,
+      312
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2739550471305847,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (16).jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      150,
+      225,
+      450,
+      675
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2611221671104431,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (8).jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      200,
+      139,
+      600,
+      415
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2655676603317261,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (28).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      75,
+      75,
+      225,
+      225
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.39407649636268616,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cucumber/image (12).jpg": {
+    "class": "Cucumber",
+    "class_idx": 2,
+    "bbox": [
+      300,
+      169,
+      900,
+      505
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.41639524698257446,
+    "true_class": "Cucumber"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/image22.jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7066674828529358,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/images19.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3344383239746094,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/image28.jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5235264301300049,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/images11.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.872782289981842,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/images27.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.42453891038894653,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/images42.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      75,
+      42,
+      225,
+      126
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.6246840953826904,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Cherry/images8.jpg": {
+    "class": "papaya",
+    "class_idx": 20,
+    "bbox": [
+      46,
+      69,
+      136,
+      207
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1930629462003708,
+    "true_class": "Cherry"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (19).jpg": {
+    "class": "Olive-tree",
+    "class_idx": 5,
+    "bbox": [
+      300,
+      300,
+      900,
+      900
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2676223814487457,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (11).jpg": {
+    "class": "coconut",
+    "class_idx": 13,
+    "bbox": [
+      300,
+      200,
+      900,
+      600
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.14872978627681732,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (5).jpeg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      46,
+      69,
+      136,
+      205
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3651489317417145,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (12).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      256,
+      144,
+      768,
+      432
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.37558844685554504,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (7).jpeg": {
+    "class": "cotton",
+    "class_idx": 14,
+    "bbox": [
+      160,
+      160,
+      480,
+      480
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.23996146023273468,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/Olive-tree/image (6).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      117,
+      117,
+      349,
+      349
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.34239059686660767,
+    "true_class": "Olive-tree"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (2).png": {
+    "class": "banana",
+    "class_idx": 9,
+    "bbox": [
+      200,
+      123,
+      600,
+      369
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.15623252093791962,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (18).jpg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      134,
+      70,
+      400,
+      210
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.7294300198554993,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (3).jpeg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      72,
+      44,
+      216,
+      130
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.38598698377609253,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (14).jpg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      225,
+      150,
+      675,
+      450
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5370484590530396,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (5).jpeg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      70,
+      45,
+      210,
+      133
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5901006460189819,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/mustard-oil/image (17).jpg": {
+    "class": "mustard-oil",
+    "class_idx": 19,
+    "bbox": [
+      104,
+      144,
+      310,
+      432
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.4308820962905884,
+    "true_class": "mustard-oil"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image11.jpeg": {
+    "class": "chilli",
+    "class_idx": 11,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.3414362072944641,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image30.jpeg": {
+    "class": "chilli",
+    "class_idx": 11,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2563665211200714,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image15.jpeg": {
+    "class": "soyabean",
+    "class_idx": 23,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.38394230604171753,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image23.jpeg": {
+    "class": "almond",
+    "class_idx": 8,
+    "bbox": [
+      68,
+      47,
+      202,
+      139
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.12243854999542236,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image18.jpeg": {
+    "class": "jowar",
+    "class_idx": 16,
+    "bbox": [
+      70,
+      45,
+      208,
+      135
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1493091732263565,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/chilli/image8.jpeg": {
+    "class": "gram",
+    "class_idx": 15,
+    "bbox": [
+      25,
+      25,
+      75,
+      75
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.222818061709404,
+    "true_class": "chilli"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/images6.jpg": {
+    "class": "almond",
+    "class_idx": 8,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.5624245405197144,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/images28.jpg": {
+    "class": "almond",
+    "class_idx": 8,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.14668895304203033,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/images13.jpg": {
+    "class": "clove",
+    "class_idx": 12,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.23126733303070068,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/image27.jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      56,
+      56,
+      168,
+      168
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.25963959097862244,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/images37.jpg": {
+    "class": "Tobacco-plant",
+    "class_idx": 7,
+    "bbox": [
+      54,
+      59,
+      160,
+      175
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.42837902903556824,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/clove/images32.jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      67,
+      47,
+      201,
+      141
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.25850439071655273,
+    "true_class": "clove"
+  },
+  "/kaggle/working/_MODELLING/validation/cardamom/image (12).jpeg": {
+    "class": "cardamom",
+    "class_idx": 10,
+    "bbox": [
+      71,
+      45,
+      211,
+      133
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1313459724187851,
+    "true_class": "cardamom"
+  },
+  "/kaggle/working/_MODELLING/validation/cardamom/image (1).jpg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      78,
+      41,
+      232,
+      121
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.1923859864473343,
+    "true_class": "cardamom"
+  },
+  "/kaggle/working/_MODELLING/validation/cardamom/image (1).jpeg": {
+    "class": "Cherry",
+    "class_idx": 0,
+    "bbox": [
+      65,
+      49,
+      193,
+      145
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.33273032307624817,
+    "true_class": "cardamom"
+  },
+  "/kaggle/working/_MODELLING/validation/cardamom/image (11).jpeg": {
+    "class": "cardamom",
+    "class_idx": 10,
+    "bbox": [
+      49,
+      64,
+      147,
+      192
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.15135599672794342,
+    "true_class": "cardamom"
+  },
+  "/kaggle/working/_MODELLING/validation/cardamom/image (5).jpeg": {
+    "class": "cardamom",
+    "class_idx": 10,
+    "bbox": [
+      67,
+      47,
+      199,
+      141
+    ],
+    "det_conf": 0.0,
+    "clf_conf": 0.2850227952003479,
+    "true_class": "cardamom"
+  }
+}
