@@ -6,8 +6,9 @@ Adapted Streamlit deployment for user's saved checkpoint:
  - gracefully falls back to separate artifacts if available
  - supports YOLO detection (ultralytics), DQN refinement (PyTorch), embedder, and TF classifier
 Drop this file into your project and run:
-    streamlit run /kaggle/working/streamlit_app.py
+    streamlit run streamlit_app.py
 """
+
 import random
 import os
 import json
@@ -17,6 +18,7 @@ from typing import Optional, Tuple
 import streamlit as st
 import numpy as np
 from PIL import Image
+
 # try imports
 try:
     import torch
@@ -32,21 +34,53 @@ try:
     import tensorflow as tf
 except Exception:
     tf = None
-# ----------------- Config -----------------
-MODELLING_ROOT = os.environ.get("MODELLING_ROOT", "_MODELLING")
-os.makedirs(MODELLING_ROOT, exist_ok=True)
-st.set_page_config(page_title="YOLOv12 + DQN Refine Demo (adapted)", layout="wide")
-st.title("YOLOv12 + DQN Refinement + TF Classifier — Adapted to saved checkpoint")
+
+# ----------------- Config (explicit local root) -----------------
+# Determine repository root relative to this file. If __file__ isn't present (rare in some runners), fall back to cwd.
+try:
+    REPO_ROOT = Path(__file__).resolve().parent
+except Exception:
+    REPO_ROOT = Path.cwd()
+
+# Default modelling root is a folder named "_MODELLING" in the repository root
+DEFAULT_MODELLING_ROOT = REPO_ROOT / "_MODELLING"
+DEFAULT_MODELLING_ROOT.mkdir(parents=True, exist_ok=True)
+
+# Allow user override via environment variable or streamlit sidebar
+env_root = os.environ.get("MODELLING_ROOT")
+if env_root:
+    DEFAULT_MODELLING_ROOT = Path(env_root)
+
+# Streamlit page
+st.set_page_config(page_title="YOLOv12 + DQN Refine Demo (local _MODELLING)", layout="wide")
+st.title("YOLOv12 + DQN Refinement + TF Classifier — Local _MODELLING aware")
+
+# Sidebar override
+st.sidebar.header("Paths & debugging")
+user_root = st.sidebar.text_input("MODELLING_ROOT (override)", str(DEFAULT_MODELLING_ROOT))
+MODELLING_ROOT = Path(user_root).expanduser().resolve()
+MODELLING_ROOT.mkdir(parents=True, exist_ok=True)
+st.sidebar.write("Using MODELLING_ROOT:", str(MODELLING_ROOT))
+
+# quick view of files present for user convenience
+files_found = sorted([p.name for p in MODELLING_ROOT.iterdir()]) if MODELLING_ROOT.exists() else []
+st.sidebar.write("Files in MODELLING_ROOT (top 40):")
+for f in files_found[:40]:
+    st.sidebar.write(f)
+
 # ----------------- Small utilities -----------------
+
 def to_contig_np(x):
     x = np.asarray(x)
     if not x.flags['C_CONTIGUOUS']:
         x = np.ascontiguousarray(x)
     return x
+
 def pil_to_rgb(img):
     if isinstance(img, str):
         img = Image.open(img)
     return img.convert('RGB')
+
 def preprocess_image_to_tensor(img_or_path, img_size=(128,128), device=None, normalize=True):
     img = img_or_path
     if isinstance(img_or_path, str):
@@ -68,7 +102,9 @@ def preprocess_image_to_tensor(img_or_path, img_size=(128,128), device=None, nor
         std = torch.tensor([0.229,0.224,0.225], device=t.device).view(1,3,1,1)
         t = (t - mean) / std
     return t
-# ----------------- Inference helpers (adapted) -----------------
+
+# ----------------- Inference helpers (same as original) -----------------
+
 def infer_emb_dim(emb_state):
     if emb_state is None:
         return 256
@@ -84,6 +120,7 @@ def infer_emb_dim(emb_state):
         except Exception:
             pass
     return 256
+
 
 def infer_dqn_params(dqn_state):
     if dqn_state is None:
@@ -112,6 +149,7 @@ def infer_dqn_params(dqn_state):
         except Exception:
             pass
     return obs_dim, hidden, n_actions
+
 # ----------------- Minimal model building blocks -----------------
 if torch is not None:
     class SmallConvEmbedder(nn.Module):
@@ -136,6 +174,7 @@ if torch is not None:
             return z
 else:
     SmallConvEmbedder = None
+
 class YoloFeatureExtractor:
     def __init__(self, yolo_obj=None, emb_dim=256, crop_size=(128,128), device=None):
         self.yolo = yolo_obj
@@ -184,7 +223,9 @@ class YoloFeatureExtractor:
         if emb is None:
             emb = np.zeros(self.emb_dim, dtype='float32')
         return np.concatenate([emb, norm, conf], axis=0)
+
 GAMMA = 0.95
+
 # DQNAgent minimal loader (same architecture used during training)
 if torch is not None:
     class DQNAgent:
@@ -300,17 +341,16 @@ if torch is not None:
             self.target.load_state_dict(self.net.state_dict())
 else:
     DQNAgent = None
-# ----------------- Loading helpers -----------------
+
+# ----------------- Loading helpers (path-aware) -----------------
 @st.cache_resource
 def load_deployment_meta(mod_root: str):
-    # prefer explicit metadata saved by save_model_and_results
     preferred = Path(mod_root) / 'yolov12_dqn_metadata.json'
     if preferred.exists():
         try:
             return json.load(open(preferred, 'r'))
         except Exception:
             pass
-    # otherwise look for deployment_meta*.json
     meta_files = sorted([p for p in Path(mod_root).glob('deployment_meta*.json')])
     if meta_files:
         try:
@@ -318,6 +358,8 @@ def load_deployment_meta(mod_root: str):
         except Exception:
             return {}
     return {}
+
+
 def _try_load_torch(path):
     if torch is None:
         return None
@@ -325,42 +367,45 @@ def _try_load_torch(path):
         return torch.load(path, map_location='cpu')
     except Exception:
         return None
+
 @st.cache_resource
 def load_models(mod_root: str):
     """
     Return dict with keys: yolo, fe, dqn, tf_clf, meta, class_map, inv_class_map
     Tries to load combined 'yolov12_dqn_classifier.pth' first, plus metadata file.
+    All file lookups are preferred inside mod_root.
     """
     meta = load_deployment_meta(mod_root) or {}
     models = {'meta': meta, 'yolo': None, 'fe': None, 'dqn': None, 'tf_clf': None, 'class_map': None, 'inv_class_map': None}
+
+    mod_root = Path(mod_root)
+
     # TF classifier (if any)
-    tf_path = os.path.join(mod_root, meta.get('saved_files', {}).get('tf_clf', 'clf_best.h5'))
-    if tf is not None and os.path.exists(tf_path):
+    tf_path = mod_root / meta.get('saved_files', {}).get('tf_clf', 'clf_best.h5')
+    if tf is not None and tf_path.exists():
         try:
-            models['tf_clf'] = tf.keras.models.load_model(tf_path, compile=False)
+            models['tf_clf'] = tf.keras.models.load_model(str(tf_path), compile=False)
         except Exception as e:
             st.warning(f"Failed loading TF classifier: {e}")
-    # YOLO candidate
-    yolo_path = '/kaggle/input/yolo12x-cls/other/default/1/yolov12x-cls.pt'
-    if YOLO is not None and os.path.exists(yolo_path):
+
+    # YOLO candidate: prefer any .pt in mod_root, then fallback to hardcoded dataset path if present
+    yolo_candidates = list(mod_root.glob('*.pt'))
+    # include a popular kaggle-derived path as fallback (kept for compatibility)
+    kaggle_fallback = Path('_MODELLING\yolov12x-cls.ptt')
+    if kaggle_fallback.exists():
+        yolo_candidates.append(kaggle_fallback)
+    if YOLO is not None and yolo_candidates:
         try:
+            yolo_path = str(yolo_candidates[-1])
             models['yolo'] = YOLO(yolo_path)
         except Exception as e:
-            st.warning(f"Failed to load YOLO from {yolo_path}: {e}")
-    else:
-        # try any .pt file
-        if YOLO is not None:
-            candidates = list(Path(mod_root).glob('*.pt'))
-            if candidates:
-                try:
-                    models['yolo'] = YOLO(str(candidates[-1]))
-                except Exception as e:
-                    st.warning(f"Candidate YOLO load failed: {e}")
-    # 1) Try combined checkpoint saved by save_model_and_results
-    combined_path = os.path.join(mod_root, 'yolov12_dqn_classifier.pth')
+            st.warning(f"Failed to load YOLO from {yolo_candidates[-1]}: {e}")
+
+    # combined checkpoint in mod_root
+    combined_path = mod_root / 'yolov12_dqn_classifier.pth'
     ck = None
-    if os.path.exists(combined_path) and torch is not None:
-        ck = _try_load_torch(combined_path)
+    if combined_path.exists() and torch is not None:
+        ck = _try_load_torch(str(combined_path))
         if ck is not None:
             # class_map
             if 'class_to_idx' in ck and isinstance(ck['class_to_idx'], dict):
@@ -413,12 +458,8 @@ def load_models(mod_root: str):
             # Create feature extractor (embedder)
             try:
                 device = torch.device('cpu')
-                # infer emb_dim from emb_state
                 inf_emb_dim = infer_emb_dim(emb_state)
-                if inf_emb_dim is not None:
-                    emb_dim = inf_emb_dim
-                else:
-                    emb_dim = 256
+                emb_dim = inf_emb_dim if inf_emb_dim is not None else 256
                 fe = YoloFeatureExtractor(yolo_obj=models['yolo'], emb_dim=emb_dim, crop_size=(128,128), device=device)
                 if emb_state is not None and fe.embed_net is not None:
                     try:
@@ -426,14 +467,13 @@ def load_models(mod_root: str):
                         fe.embed_net.eval()
                         models['fe'] = fe
                     except Exception:
-                        # maybe emb_state contains full model state under 'model' key
                         if isinstance(emb_state, dict) and 'model' in emb_state:
                             try:
                                 fe.embed_net.load_state_dict(emb_state['model'])
                                 fe.embed_net.eval()
                                 models['fe'] = fe
                             except Exception:
-                                models['fe'] = fe # keep fe even if uninitialized weights
+                                models['fe'] = fe
                         else:
                             models['fe'] = fe
                 else:
@@ -442,7 +482,6 @@ def load_models(mod_root: str):
                 st.warning(f"Failed to setup embedder from combined checkpoint: {e}")
             # Create DQN and load state if possible
             if dqn_state is not None:
-                # infer from shape
                 inf_obs_dim, inf_hidden, inf_n_actions = infer_dqn_params(dqn_state)
                 if inf_obs_dim is not None:
                     obs_dim = inf_obs_dim
@@ -450,23 +489,19 @@ def load_models(mod_root: str):
                     hidden = inf_hidden
                 if inf_n_actions is not None:
                     n_actions = inf_n_actions
-                # attempt to infer obs_dim if still None
                 if obs_dim is None and models.get('fe') is not None:
                     obs_dim = models['fe'].emb_dim + 4 + 1
                 try:
                     if DQNAgent is not None and obs_dim is not None:
                         dqn = DQNAgent(obs_dim, n_actions, hidden=hidden, device=torch.device('cpu'))
-                        # accept full state dict or nested dicts
                         try:
                             dqn.net.load_state_dict(dqn_state)
                         except Exception:
-                            # try nested shapes
                             if isinstance(dqn_state, dict) and 'net_state_dict' in dqn_state:
                                 dqn.net.load_state_dict(dqn_state['net_state_dict'])
                             elif isinstance(dqn_state, dict) and 'model_state_dict' in dqn_state:
                                 dqn.net.load_state_dict(dqn_state['model_state_dict'])
                             else:
-                                # try to match by keys subset
                                 try:
                                     model_state = {k:v for k,v in dqn_state.items() if k in dqn.net.state_dict()}
                                     dqn.net.load_state_dict(model_state, strict=False)
@@ -476,19 +511,16 @@ def load_models(mod_root: str):
                         models['dqn'] = dqn
                 except Exception as e:
                     st.warning(f"Failed to restore DQN from combined checkpoint: {e}")
+
     # 2) If combined checkpoint not found or partially filled, attempt to load separate files
     # embedder
     if models['fe'] is None:
-        emb_path = os.path.join(mod_root, 'embedder_state.pth')
-        if os.path.exists(emb_path) and torch is not None:
-            emb_ck = _try_load_torch(emb_path)
+        emb_path = mod_root / 'embedder_state.pth'
+        if emb_path.exists() and torch is not None:
+            emb_ck = _try_load_torch(str(emb_path))
             if emb_ck is not None:
-                # infer emb_dim
                 inf_emb_dim = infer_emb_dim(emb_ck)
-                if inf_emb_dim is not None:
-                    emb_dim = inf_emb_dim
-                else:
-                    emb_dim = 256
+                emb_dim = inf_emb_dim if inf_emb_dim is not None else 256
                 try:
                     device = torch.device('cpu')
                     fe = YoloFeatureExtractor(yolo_obj=models['yolo'], emb_dim=emb_dim, crop_size=(128,128), device=device)
@@ -500,9 +532,9 @@ def load_models(mod_root: str):
                     st.warning(f"Failed loading embedder_state.pth: {e}")
     # dqn
     if models['dqn'] is None:
-        dqn_path = os.path.join(mod_root, 'dqn_checkpoint.pth')
-        if os.path.exists(dqn_path) and torch is not None:
-            ck2 = _try_load_torch(dqn_path)
+        dqn_path = mod_root / 'dqn_checkpoint.pth'
+        if dqn_path.exists() and torch is not None:
+            ck2 = _try_load_torch(str(dqn_path))
             if ck2 is not None:
                 obs_dim = None
                 n_actions = 9
@@ -518,7 +550,6 @@ def load_models(mod_root: str):
                             n_actions = int(ck2.get('n_actions'))
                         except Exception:
                             pass
-                # infer from shape
                 inf_obs_dim, inf_hidden, inf_n_actions = infer_dqn_params(ck2)
                 if inf_obs_dim is not None:
                     obs_dim = inf_obs_dim
@@ -526,13 +557,11 @@ def load_models(mod_root: str):
                     hidden = inf_hidden
                 if inf_n_actions is not None:
                     n_actions = inf_n_actions
-                # infer obs_dim from fe if possible
                 if obs_dim is None and models.get('fe') is not None:
                     obs_dim = models['fe'].emb_dim + 4 + 1
                 try:
                     if obs_dim is not None and DQNAgent is not None:
                         dqn = DQNAgent(obs_dim, n_actions, hidden=hidden, device=torch.device('cpu'))
-                        # try common keys
                         try:
                             dqn.net.load_state_dict(ck2)
                         except Exception:
@@ -544,7 +573,6 @@ def load_models(mod_root: str):
                                     except Exception:
                                         pass
                             else:
-                                # fallback partial
                                 partial = {k:v for k,v in ck2.items() if k in dqn.net.state_dict()}
                                 if partial:
                                     dqn.net.load_state_dict(partial, strict=False)
@@ -561,22 +589,22 @@ def load_models(mod_root: str):
                 models['inv_class_map'] = {int(v): str(k) for k, v in cm.items()}
             except Exception:
                 pass
-    # last resort: infer from directories in common train/data locations
+    # last resort: infer from directories in common train/data locations (relative to mod_root)
     if models['class_map'] is None:
         cand_dirs = [
-            os.path.join(mod_root, "train"),
-            os.path.join(mod_root, "TRAIN"),
-            os.path.join(mod_root, "data", "train"),
-            os.path.join(mod_root, "data", "TRAIN"),
-            os.path.join(mod_root, "..", "train"),
+            mod_root / "train",
+            mod_root / "TRAIN",
+            mod_root / "data" / "train",
+            mod_root / "data" / "TRAIN",
+            mod_root.parent / "train",
         ]
         classes = set()
         for d in cand_dirs:
             try:
-                if d and os.path.exists(d) and os.path.isdir(d):
+                if d and d.exists() and d.is_dir():
                     for name in sorted(os.listdir(d)):
-                        p = os.path.join(d, name)
-                        if os.path.isdir(p) and not name.startswith('.'):
+                        p = d / name
+                        if p.is_dir() and not name.startswith('.'):
                             classes.add(str(name))
             except Exception:
                 continue
@@ -588,10 +616,13 @@ def load_models(mod_root: str):
             models['inv_class_map'] = inv_map
             models['meta'].setdefault('class_map', class_map)
     return models
-models = load_models(MODELLING_ROOT)
+
+# Load models (cache_resource will reuse across reruns)
+models = load_models(str(MODELLING_ROOT))
+
 # ----------------- Sidebar: status -----------------
 st.sidebar.header("Model status (adapted)")
-st.sidebar.write("MODELLING_ROOT: ", MODELLING_ROOT)
+st.sidebar.write("MODELLING_ROOT: ", str(MODELLING_ROOT))
 if models.get('yolo') is not None:
     st.sidebar.success("YOLO: available")
 else:
@@ -608,16 +639,20 @@ if models.get('tf_clf') is not None:
     st.sidebar.success("TF classifier: available")
 else:
     st.sidebar.info("TF classifier: NOT available — classification disabled")
+
+# pseudo bboxes now explicitly resolved inside MODELLING_ROOT
 pseudo = {}
-pseudo_path = os.path.join(MODELLING_ROOT, 'pseudo_bboxes.json')
-if os.path.exists(pseudo_path):
+pseudo_path = MODELLING_ROOT / 'pseudo_bboxes.json'
+if pseudo_path.exists():
     try:
         pseudo = json.load(open(pseudo_path, 'r'))
     except Exception:
         pseudo = {}
+
 # Make accessible maps
 class_map = models.get('class_map')
-inv_class_map = models.get('inv_class_map') or ( {int(k):str(v) for k,v in (class_map or {}).items()} if class_map else None )
+inv_class_map = models.get('inv_class_map') or ({int(k):str(v) for k,v in (class_map or {}).items()} if class_map else None)
+
 # ----------------- UI -----------------
 col1, col2 = st.columns([1,1])
 with col1:
@@ -627,13 +662,14 @@ with col2:
     st.markdown("**Actions**")
     refine_steps = st.slider("Max refine steps (DQN)", min_value=1, max_value=3, value=1)
     run_refine = st.button("Refine & Classify")
+
 image_path = None
 img_obj = None
 if uploaded is not None:
-    tmp_path = os.path.join(MODELLING_ROOT, f"uploaded_{int(time.time())}_{uploaded.name}")
+    tmp_path = MODELLING_ROOT / f"uploaded_{int(time.time())}_{uploaded.name}"
     with open(tmp_path, 'wb') as f:
         f.write(uploaded.getbuffer())
-    image_path = tmp_path
+    image_path = str(tmp_path)
     img_obj = Image.open(image_path).convert('RGB')
 elif example_btn:
     if len(pseudo) > 0:
@@ -642,22 +678,21 @@ elif example_btn:
         if os.path.exists(key):
             image_path = key
         else:
-            # try in MODELLING_ROOT
-            p = os.path.join(MODELLING_ROOT, key)
-            if os.path.exists(p):
-                image_path = p
+            p = MODELLING_ROOT / key
+            if p.exists():
+                image_path = str(p)
         if image_path:
             img_obj = Image.open(image_path).convert('RGB')
     else:
         st.warning("No pseudo entries available to pick example from.")
 if img_obj is not None:
     st.image(img_obj, caption='Input image', use_column_width=True)
+
 # ----------------- Inference helpers (adapted) -----------------
 def get_initial_bbox_by_yolo(img_path_or_obj, models):
     if models.get('yolo') is None:
         return None
     try:
-        # prefer wrapper detector if fe exists
         if isinstance(img_path_or_obj, str):
             preds = models['yolo'].predict(source=img_path_or_obj, imgsz=640, verbose=False)
         else:
@@ -671,13 +706,13 @@ def get_initial_bbox_by_yolo(img_path_or_obj, models):
         xyxy = b.xyxy.cpu().numpy().reshape(-1).tolist()
         return [int(v) for v in xyxy]
     except Exception:
-        # fallback to feature extractor detect_top1 if available
         if models.get('fe') is not None:
             try:
                 return models['fe'].detect_top1(img_path_or_obj)[0]
             except Exception:
                 return None
         return None
+
 def refine_with_dqn(image_path: str, init_bbox: Tuple[int,int,int,int], models, max_steps=12):
     if models.get('dqn') is None or models.get('fe') is None:
         return init_bbox, None
@@ -689,6 +724,7 @@ def refine_with_dqn(image_path: str, init_bbox: Tuple[int,int,int,int], models, 
         if done:
             break
     return env.bbox, info.get('iou', None)
+
 def classify_crop_with_tf(crop_pil, tf_clf):
     if tf_clf is None:
         return None
@@ -699,6 +735,7 @@ def classify_crop_with_tf(crop_pil, tf_clf):
     except Exception as e:
         st.warning(f"TF classifier predict failed: {e}")
         return None
+
 # Reuse ActiveCropEnvTorch from reference (copy here to ensure completeness)
 class ActiveCropEnvTorch:
     def __init__(self, image_path, target_bbox, fe: YoloFeatureExtractor, img_size=(128,128), max_steps=12):
@@ -755,6 +792,7 @@ class ActiveCropEnvTorch:
         union = area1 + area2 - inter
         if union <= 0: return 0.0
         return inter/union
+
 # ----------------- Run pipeline -----------------
 if run_refine and img_obj is not None:
     st.markdown("### Running detection → refine → classify")
@@ -773,7 +811,6 @@ if run_refine and img_obj is not None:
         if fname in pseudo:
             init_bbox = pseudo[fname].get('bbox')
     if init_bbox is None and len(pseudo) > 0:
-        # try first pseudo bbox value
         try:
             init_bbox = list(pseudo.values())[0].get('bbox')
         except Exception:
@@ -786,7 +823,7 @@ if run_refine and img_obj is not None:
         crop_init = img_obj.crop((x1,y1,x2,y2)).resize((160,160))
         st.image(crop_init, caption='Initial crop (pseudo/YOLO)', width=220)
         # 3) refine with DQN
-        final_bbox, final_iou = refine_with_dqn(image_path if uploaded is not None else image_path or None, init_bbox, models, max_steps=refine_steps)
+        final_bbox, final_iou = refine_with_dqn(image_path if image_path is not None else None, init_bbox, models, max_steps=refine_steps)
         st.write("Refined bbox:", final_bbox, " IoU:", final_iou)
         x1,y1,x2,y2 = [int(v) for v in final_bbox]
         crop_final = img_obj.crop((x1,y1,x2,y2)).resize((160,160))
@@ -818,14 +855,15 @@ if run_refine and img_obj is not None:
             st.pyplot(fig)
         except Exception:
             pass
+
 # ----------------- Footer tips -----------------
 st.sidebar.markdown("---")
-st.sidebar.header("Deployment tips (adapted)")
+st.sidebar.header("Deployment tips (local)")
 st.sidebar.write(
-    "This app prefers the combined checkpoint file 'yolov12_dqn_classifier.pth' and metadata 'yolov12_dqn_metadata.json'.\n"
-    "If those are not present, it will try common filenames: 'embedder_state.pth', 'dqn_checkpoint.pth', 'clf_best.h5', or any '*.pt' YOLO file."
+    "This app prefers the combined checkpoint file 'yolov12_dqn_classifier.pth' and metadata 'yolov12_dqn_metadata.json' inside the MODELLING_ROOT.\n"
+    "If those are not present, it will try common filenames: 'embedder_state.pth', 'dqn_checkpoint.pth', 'clf_best.h5', or any '*.pt' YOLO file inside that folder."
 )
 st.sidebar.markdown("**Files expected in MODELLING_ROOT**")
 for f in ['yolov12_dqn_classifier.pth','yolov12_dqn_metadata.json','embedder_state.pth','dqn_checkpoint.pth','clf_best.h5','pseudo_bboxes.json']:
-    st.sidebar.write(f, '✅' if os.path.exists(os.path.join(MODELLING_ROOT,f)) else '❌')
+    st.sidebar.write(f, '✅' if (MODELLING_ROOT / f).exists() else '❌')
 st.markdown("\n---\n*Built for demo. For production, host weights externally and load at startup to avoid large repo sizes.*")
